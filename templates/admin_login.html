@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Admin Login | PrintPulse{% endblock %}
+
+{% block content %}
+<div class="col-md-4 mx-auto mt-5">
+  <h3 class="text-center mb-4">🔐 Admin Login</h3>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="password" class="form-label">Enter Admin Password</label>
+      <input type="password" name="password" class="form-control" required>
+      {% if error %}
+        <small class="text-danger">{{ error }}</small>
+      {% endif %}
+    </div>
+    <button type="submit" class="btn btn-dark w-100 fw-semibold">Login</button>
+  </form>
+</div>
+{% endblock %}
